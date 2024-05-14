@@ -1,0 +1,15 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+	"name": "Deno",
+	"postCreateCommand": "curl -fsSL https://deno.land/install.sh | sh && echo 'export PATH=\"$HOME/.deno/bin:$PATH\"' >> $HOME/.bashrc && echo 'export ASTRO_DATABASE_FILE=\"./astro.db\"' >> $HOME/.bashrc",
+	"postStartCommand": "npm i -g pnpm && pnpm install",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"astro-build.astro-vscode",
+				"denoland.vscode-deno"
+			]
+		}
+	}
+}
